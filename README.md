@@ -7,6 +7,19 @@ Votre rôle : interroger la base de données existante pour produire des statist
 
 ---
 
+## 🗃️ Structure realtionnelle
+
+| Table             | Contenu                                                               |
+| ----------------- | --------------------------------------------------------------------- |
+| `jeux`            | Les jeux vidéo disponibles                                            |
+| `joueurs`         | Les utilisateurs de la plateforme                                     |
+| `sessions`        | Parties de jeu enregistrées                                           |
+| `scores`          | Scores obtenus lors des sessions                                      |
+| `equipes`         | Certaines parties peuvent être jouées en équipe                       |
+| `membres_equipes` | Joueurs qui appartiennent à une équipe                                |
+| `genres`          | Genre des jeux (pour requêtes multi-tables avec jointures indirectes) |
+
+
 ## 🔧 Phase 1 : Mise en place
 
 1. Exécutez le script `init_gameworld.sql` dans votre instance MySQL.
