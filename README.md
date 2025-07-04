@@ -90,3 +90,20 @@ Vous allez créer un accès utilisateur limité pour un analyste externe.
 ## 📁 Fichiers fournis
 
 - `init_gameworld.sql` — Script de création des tables et insertion de données.
+
+## 📸 Dossier de livrables
+
+Pour valider votre travail, créez un dossier `capture/` dans lequel vous placerez les éléments suivants :
+
+- Des **captures d'écran** ou **exports texte** des résultats pour chaque requête de la Phase 2.
+- Une **preuve de la sauvegarde complète** (contenu ou capture de la commande `mysqldump`, fichier `.sql`, etc.).
+- Une **preuve de la restauration réussie** (extrait de vérification ou capture de la base restaurée).
+- Une **preuve que les rôles ont bien été appliqués** :
+  - Connexion avec l'utilisateur `analyste`
+  - Tentative de lecture autorisée
+  - Tentative d’écriture ou d’accès interdit à d'autres tables
+
+Les fichiers peuvent être des `.sql`, `.txt`, `.png`, `.jpg`, ou toute autre extension lisible et cohérente.
+
+> ✅ Ce dossier servira de **preuve de complétion** et sera à rendre avec votre travail final.
+
