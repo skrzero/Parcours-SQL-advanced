@@ -27,4 +27,44 @@ join joueurs as j
 on j.id = s.id_joueur
 group by j.pseudo,j.id;
 
+-- exo 6
+select j.pseudo,j.id,s.score,s.id_joueur from joueurs as j
+join scores as s
+on j.id = s.id_joueur
+where s.score >= 1400;
+
+-- exo 7
+select j.pseudo,j.pays,e.nom,me.id_equipe from joueurs as j
+join membres_equipes as me
+on j.id = me.id_joueur
+join equipes as e
+on e.id = me.id_equipe;
+
+-- exo 8
+select j.titre,COUNT(s.id) as nombres_sessions
+from jeux as j
+join sessions as s
+on j.id = s.id_jeu
+group by j.id, j.titre
+having COUNT(s.id) > 3;
+
+-- exo 9
+select s.id AS id_session,s.date_session,j.titre,COUNT(DISTINCT sc.id_joueur) AS nombres_joueurs from sessions AS s
+join jeux AS j ON j.id = s.id_jeu
+join scores AS sc ON sc.id_session = s.id
+GROUP BY s.id, s.date_session, j.titre;
+
+-- exo 10
+select j.titre, avg(sc.score) as moyenne_score
+from scores as sc
+join sessions as s on s.id = sc.id_session
+join jeux as j on j.id = s.id_jeu
+group by j.id, j.titre
+order by moyenne_score desc;
+
+ 
+
+
+
+
 
