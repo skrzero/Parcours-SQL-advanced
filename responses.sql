@@ -62,7 +62,13 @@ join jeux as j on j.id = s.id_jeu
 group by j.id, j.titre
 order by moyenne_score desc;
 
- 
+create user 'analyst'@'localhost' IDENTIFIED by 'azerty'
+grant select on gameworld.joueurs to 'analyst'@'localhost';
+grant select on gameworld.scores to 'analyst'@'localhost';
+grant select on gameworld.sessions to 'analyst'@'localhost';
+
+update joueurs
+set pseudo = nom;
 
 
 
